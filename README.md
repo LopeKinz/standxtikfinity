@@ -11,7 +11,7 @@ This project demonstrates how to **bridge** Tikfinity’s WebSocket events into 
    - Buffers each incoming event in memory.  
    - Exposes `GET /events` which returns **unread** events as JSON, then clears them from the queue.
 
-2. **`tikfinity_bridge.lua`**  
+2. **`tikfinity.lua`**  
    - A Stand Lua script that **polls** the Node.js server every few seconds, retrieving new events.  
    - Parses each event, displays a message in GTA, and runs a custom Stand command (e.g., chat) using placeholders (`{name}`, `{message}`, `{gift}`).
 
@@ -109,7 +109,7 @@ app.listen(HTTP_PORT, () => {
 
 ---
 
-## `tikfinity_bridge.lua` (Stand Lua)
+## `tikfinity.lua` (Stand Lua)
 
 A Stand Lua script that:
 
