@@ -6,7 +6,7 @@ This project demonstrates how to **bridge** Tikfinity’s WebSocket events into 
 
 ## Overview
 
-1. **`bridge.js`**  
+1. **`fix.js`**  
    - A Node.js server that connects to Tikfinity’s local WebSocket (`ws://localhost:21213`).  
    - Buffers each incoming event in memory.  
    - Exposes `GET /events` which returns **unread** events as JSON, then clears them from the queue.
@@ -19,7 +19,7 @@ By separating the **WebSocket** logic into Node.js, we avoid Stand’s lack of b
 
 ---
 
-## `bridge.js` (Node.js)
+## `fix.js` (Node.js)
 
 A simple Node.js server that:
 
@@ -31,9 +31,9 @@ A simple Node.js server that:
 ### Example
 
 ```js
-// bridge.js
+// fix.js
 // 1) Install dependencies: npm install ws express cors
-// 2) Run: node bridge.js
+// 2) Run: node fix.js
 
 const WebSocket = require('ws');
 const express = require('express');
@@ -95,7 +95,7 @@ app.listen(HTTP_PORT, () => {
    ```
 3. **Start** the script:  
    ```bash
-   node bridge.js
+   node fix.js
    ```
 4. Check that it outputs something like:  
    ```
@@ -121,7 +121,7 @@ A Stand Lua script that:
 ### Example
 
 ```lua
--- tikfinity_bridge.lua
+-- tikfinity.lua
 local json = require("json")
 
 local bridge_host = "localhost:3000"
@@ -225,7 +225,7 @@ end
 ```
 
 #### How to Use
-1. Place `tikfinity_bridge.lua` in your **Stand > Lua Scripts** folder.  
+1. Place `tikfinity.lua` in your **Stand > Lua Scripts** folder.  
 2. **Load** it in Stand’s Lua Scripts menu.  
 3. Toggle **Start Polling Events**.  
 4. Each time Tikfinity triggers an event, Node receives it via WebSocket, then you retrieve it via `GET /events`.  
@@ -259,8 +259,8 @@ flowchart LR
 ```
 
 1. Tikfinity **sends** events over WS to Node.  
-2. Node’s `bridge.js` **queues** them and **serves** them via `/events`.  
-3. Stand’s `tikfinity_bridge.lua` **polls** `/events`, then calls `parse_tiktok_event(...)`.
+2. Node’s `fix.js` **queues** them and **serves** them via `/events`.  
+3. Stand’s `tikfinity.lua` **polls** `/events`, then calls `parse_tiktok_event(...)`.
 
 ---
 
