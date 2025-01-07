@@ -46,7 +46,7 @@ local event_templates = {
 ----------------------------------------
 -- 2) MENU SETUP
 ----------------------------------------
-menu.divider(menu.my_root(), "Tikfinity Bridge (HTTP Polling)")
+menu.divider(menu.my_root(), "Tikfinity Bridge by legendpinkyhax")
 
 -- Let user customize the Node.js bridge host & path
 menu.text_input(
