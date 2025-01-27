@@ -1,8 +1,8 @@
 
 
-# Tikfinity → Node.js → Standxtikfinity
+# StandxTikfinity
 
-This project demonstrates how to **bridge** Tikfinity’s WebSocket events into Stand (a GTA V mod menu) using **Node.js** for WebSocket handling and **Lua** for HTTP polling in Stand.
+This project demonstrates how to **bridge** Tikfinity’s WebSocket events into Stand (a GTA V mod menu) using **fix.js** for WebSocket handling and **Lua** for HTTP polling in Stand.
 
 ## Overview
 
