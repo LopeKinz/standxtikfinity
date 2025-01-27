@@ -1,81 +1,80 @@
+# Stand x Tikfinity Connector
 
-Stand x Tikfinity Connector
+**Stand x Tikfinity Connector** is a powerful and easy-to-use tool designed to boost TikTok engagement by connecting **Tikfinity** with **Stand** in GTA 5. The tool triggers in-game actions based on TikTok events such as joins, likes, shares, follows, subscriptions, and gifts. Customize everything via the intuitive GUI in Stand for a seamless and engaging experience.
 
-Stand x Tikfinity Connector is a powerful and easy-to-use tool designed to boost TikTok engagement by connecting Tikfinity with Stand in GTA 5. The tool triggers in-game actions based on TikTok events such as joins, likes, shares, follows, subscriptions, and gifts. Customize everything via the intuitive GUI in Stand for a seamless and engaging experience.
+---
 
-Features
-	•	TikTok Event Integration: Automate responses to TikTok events like follows, likes, shares, and more.
-	•	Customizable Commands: Use the Stand GUI to set up unique in-game actions for each TikTok event.
-	•	Streamlined Setup: Easily bridge Tikfinity and Stand using this tool with minimal configuration.
-	•	Event Support: Includes all major TikTok events: Join, Like, Share, Follow, Subscribe, and Gift.
+## Features
+- **TikTok Event Integration**: Automate responses to TikTok events like follows, likes, shares, and more.
+- **Customizable Commands**: Use the Stand GUI to set up unique in-game actions for each TikTok event.
+- **Streamlined Setup**: Easily bridge Tikfinity and Stand using this tool with minimal configuration.
+- **Event Support**: Includes all major TikTok events: Join, Like, Share, Follow, Subscribe, and Gift.
 
-Setup Guide
+---
 
-Prerequisites
-	1.	Tikfinity: Download the app from here.
-	2.	Stand Mod: Ensure you have the Stand mod installed and running in GTA 5 (Singleplayer or Multiplayer).
-	3.	Node.js: Download and install Node.js (required to run Fix.js).
-	4.	Visual Studio Code (VS Code): Download and install VS Code.
+## Setup Guide
 
-Installation Steps
+### Prerequisites
+1. **Tikfinity**: Download the app from [here](https://tikfinity.zerody.one/app/).  
+2. **Stand Mod**: Ensure you have the Stand mod installed and running in GTA 5 (Singleplayer or Multiplayer).  
+3. **Node.js**: Download and install [Node.js](https://nodejs.org) (required to run `Fix.js`).  
+4. **Visual Studio Code (VS Code)**: Download and install [VS Code](https://code.visualstudio.com).  
 
-1. Download and Set Up Tikfinity
-	•	Go to Tikfinity and download the app.
-	•	Connect Tikfinity to your TikTok account and configure it to handle stream events.
+---
 
-2. Clone This Repository
-	•	Clone the repository and navigate to the project folder:
+### Installation Steps
 
-git clone https://github.com/LopeKinz/standxtikfinity.git
-cd standxtikfinity
+#### 1. Download and Set Up Tikfinity
+- Go to [Tikfinity](https://tikfinity.zerody.one/app/) and download the app.  
+- Connect Tikfinity to your TikTok account.
 
+#### 2. Clone This Repository
+- Clone the repository and navigate to the project folder:  
+  ```bash
+  git clone https://github.com/LopeKinz/standxtikfinity.git
+  cd standxtikfinity
+  ```
 
+#### 3. Install Dependencies
+- Use Node.js to install the required dependencies for `Fix.js`:  
+  ```bash
+  npm install
+  ```
 
-3. Install Dependencies
-	•	Use Node.js to install the required dependencies for Fix.js:
+#### 4. Run `Fix.js`
+- Start the `Fix.js` script in VS Code or your terminal:  
+  ```bash
+  node Fix.js
+  ```
+- This script translates WebSocket events from Tikfinity into JSON files that Stand can read.
 
-npm install
+#### 5. Configure Stand
+- Launch GTA 5 in **Singleplayer** (or Multiplayer) and open Stand.  
+- Load the Lua script included in this repository.  
+- Ensure internet access is enabled for Stand.  
+- Set the URL in the script to one of the following:
+  - `http://localhost:3000`
+  - `http://127.0.0.1:3000`
 
+#### 6. Start Streaming
+- Go live on TikTok using Tikfinity.
+- Sit back and watch your TikTok events trigger in-game commands in GTA 5.
 
+---
 
-4. Run Fix.js
-	•	Start the Fix.js script in VS Code or your terminal:
+## Troubleshooting
+- **`Fix.js` Errors**: Make sure Node.js is installed, and dependencies are properly installed with `npm install`.  
+- **Connection Issues**: Ensure the URLs match in both Stand and Tikfinity.  
+- **Event Trigger Problems**: Verify that the Lua script is running and correctly configured in Stand.  
+- For more help, check the repositoryâs [Issues](https://github.com/LopeKinz/standxtikfinity/issues) section.
 
-node Fix.js
+---
 
+### Note for Stand Staff  
+The `Fix.js` file is required because Stand does not natively support WebSocket connections. This script converts WebSocket events into JSON files that Stand can process through its browser functionality. This approach ensures smooth integration without requiring native WebSocket support.
 
-	•	This script translates WebSocket events from Tikfinity into JSON files that Stand can read.
+**Please donât ban me again!**
 
-5. Configure Stand
-	•	Launch GTA 5 in Singleplayer (or Multiplayer) and open Stand.
-	•	Load the Lua script included in this repository.
-	•	Ensure internet access is enabled for Stand.
-	•	Set the URL in the script to one of the following:
-	•	http://localhost:3000
-	•	http://127.0.0.1:3000
+---
 
-6. Customize Events in Stand
-	•	Use the GUI in Stand to assign commands for each TikTok event:
-	•	Join: Trigger actions when viewers join your stream.
-	•	Like: Respond to likes with in-game effects.
-	•	Share: Add interactions for stream shares.
-	•	Follow: Reward new followers with fun in-game triggers.
-	•	Subscribe/Gift: Celebrate subscribers or gift senders with special effects.
-
-7. Start Streaming
-	•	Start your TikTok stream using Tikfinity.
-	•	Sit back and watch your TikTok events trigger in-game commands in GTA 5.
-
-Troubleshooting
-	•	Fix.js Errors: Make sure Node.js is installed, and dependencies are properly installed with npm install.
-	•	Connection Issues: Ensure the URLs match in both Stand and Tikfinity.
-	•	Event Trigger Problems: Verify that the Lua script is running and correctly configured in Stand.
-	•	For more help, check the repository’s Issues section.
-
-Note for Stand Staff
-
-The Fix.js file is required because Stand does not natively support WebSocket connections. This script converts WebSocket events into JSON files that Stand can process through its browser functionality. This approach ensures smooth integration without requiring native WebSocket support.
-
-Please don’t ban me again!
-
-GitHub: Stand x Tikfinity Connector
+GitHub: [Stand x Tikfinity Connector](https://github.com/LopeKinz/standxtikfinity)
