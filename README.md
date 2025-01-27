@@ -66,14 +66,14 @@
 - **`Fix.js` Errors**: Make sure Node.js is installed, and dependencies are properly installed with `npm install`.  
 - **Connection Issues**: Ensure the URLs match in both Stand and Tikfinity.  
 - **Event Trigger Problems**: Verify that the Lua script is running and correctly configured in Stand.  
-- For more help, check the repositoryâs [Issues](https://github.com/LopeKinz/standxtikfinity/issues) section.
+- For more help, check the repository's [Issues](https://github.com/LopeKinz/standxtikfinity/issues) section.
 
 ---
 
 ### Note for Stand Staff  
 The `Fix.js` file is required because Stand does not natively support WebSocket connections. This script converts WebSocket events into JSON files that Stand can process through its browser functionality. This approach ensures smooth integration without requiring native WebSocket support.
 
-**Please donât ban me again!**
+**Please don't ban me again!**
 
 ---
 
